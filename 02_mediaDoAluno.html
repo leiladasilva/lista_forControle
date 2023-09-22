@@ -6,12 +6,21 @@
     Calcule a média das notas e apresente o resultado na tela.
     */
 
+
     //ENTRADA
-    
+    const numeroDeNotas = Number(prompt("Informe quantas notas o aluno obteve"));
+    let somaDasNotas = 0;
 
     //PROCESSAMENTO
-    
+    for (let i = 0; i < numeroDeNotas; i++) {
+        let nota = Number(prompt(`Informe a nota ${i + 1}`));
+        somaDasNotas += nota;
+    }
+
+    let  media = somaDasNotas / numeroDeNotas;
 
     //SAÍDA
+    document.write(`A média das notas é: ${media.toFixed(2)}`);
+
 
 </script>

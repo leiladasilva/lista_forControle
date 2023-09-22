@@ -10,9 +10,29 @@
     */
 
     //ENTRADA
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
 
-    
-    //PROCESSAMENTO
+// Passo 1: Converter todas as letras para minúsculas
+let letrasMinusc = [];
+for (let letra of listaDeLetras) {
+  letrasMinusc.push(letra.toLowerCase());
+}
+
+// Passo 2: Remover letras repetidas
+let listaSemRepeticoes = [];
+for (let letra of letrasMinusc) {
+  if (!listaSemRepeticoes.includes(letra)) {
+    listaSemRepeticoes.push(letra);
+  }
+}
+
+// Passo 3: Ordenar a lista resultante em ordem alfabética
+listaSemRepeticoes.sort();
+
+// Apresentar as letras em ordem alfabética
+document.write(` ${listaSemRepeticoes} não são repitidas ` );
+
+
 
     
     //SAÍDA
