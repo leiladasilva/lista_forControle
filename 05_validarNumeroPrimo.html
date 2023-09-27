@@ -9,7 +9,23 @@
 
 
     //PROCESSAMENTO
-
+    const numeroPrimo = parseInt(prompt(`Qual número deseja validar se é número primo?`));
+    let divisivel = 0;
+    for (let contador = 1; contador <= numeroPrimo; contador++) {
+        if (numeroPrimo % contador === 0) {
+            divisivel = divisivel + 2;
+            document.write(`${numeroPrimo} dividido por ${contador}  </br>`)
+        }
+        else {
+            document.write(`${numeroPrimo} dividido por ${contador} não divide </br>`);
+        }
+    }
+    if (divisivel === 2) {
+        document.write(`O número ${numeroPrimo} é um número primo, pois só divide por um e por ele mesmo!`);
+    }
+    else {
+        document.write(`O número ${numeroPrimo} não é um numero impar  ${divisivel} números!`);
+    }
 
     //SAÍDA
 
