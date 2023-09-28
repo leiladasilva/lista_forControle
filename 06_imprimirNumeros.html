@@ -6,11 +6,29 @@
     */
 
     //ENTRADA
+    const numeroInicial = parseInt(prompt("Digite o número inicial:"));
+const numeroFinal = parseInt(prompt("Digite o número final:"));
 
-    
-    //PROCESSAMENTO
+//PROCESSAMENTO
+if (numeroInicial < numeroFinal) {
+    const numerosPares = [];
+    const numerosImpares = [];
 
-    
+    for (let numero = numeroInicial; numero <= numeroFinal; numero++) {
+        if (numero % 2 === 0) {
+            numerosPares.push(numero);
+        } else {
+            numerosImpares.push(numero);
+        }
+    }
+
     //SAÍDA
+    document.write("Números pares entre " + numeroInicial + " e " + numeroFinal + ": " + numerosPares.join(", "));
+    document.write("Números ímpares entre " + numeroInicial + " e " + numeroFinal + ": " + numerosImpares.join(", "));
+} else {
+    document.write("Erro: O número inicial deve ser menor que o número final.");
+}
+    
+   
 
 </script>

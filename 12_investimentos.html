@@ -5,11 +5,22 @@
     */
 
     //ENTRADA
+    const investimentoInicial = 1000; 
+const metaInvestimento = 2000; 
+const taxaDiaria = 0.02; 
+
+let dias = 0;
+let saldo = investimentoInicial;
 
 
-    //PROCESSAMENTO
+while (saldo < metaInvestimento) {
+    dias++;
+    saldo += saldo * taxaDiaria;
+}
 
 
-    //SAÍDA
+document.write(`Joãozinho levará ${dias} dias para atingir um saldo de R$ ${metaInvestimento.toFixed(2)}.`);
+
+    
 
 </script>

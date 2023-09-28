@@ -6,11 +6,29 @@
     */
 
     //ENTRADA
+    // Dados iniciais
+const populacaoInicial = 50000;
+const taxaCrescimentoAnual = 0.015; 
+
+
+const prazo5Anos = 5;
+const prazo10Anos = 10;
+
+let populacao5Anos = populacaoInicial;
+for (let anos = 1; anos <= prazo5Anos; anos++) {
+    populacao5Anos += populacao5Anos * taxaCrescimentoAnual;
+}
+
+
+let populacao10Anos = populacaoInicial;
+for (let anos = 1; anos <= prazo10Anos; anos++) {
+    populacao10Anos += populacao10Anos * taxaCrescimentoAnual;
+}
+
+
+document.write(`População prevista em ${prazo5Anos} anos: ${populacao5Anos.toFixed(0)} habitantes`);
+document.write(`População prevista em ${prazo10Anos} anos: ${populacao10Anos.toFixed(0)} habitantes`);
 
     
-    //PROCESSAMENTO
-    
-
-    //SAÍDA
-
+   
 </script>
